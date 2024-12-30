@@ -1,0 +1,12 @@
+einops==0.8.0
+lpips==0.1.4
+matplotlib==3.6.2
+numpy==1.21.5
+Pillow==11.0.0
+pytorch_msssim==1.0.0
+PyYAML==6.0.2
+scipy==1.8.0
+tensorboardX==2.6
+torch==2.5.0+cu124
+torchvision==0.20.0
+tqdm==4.65.0
