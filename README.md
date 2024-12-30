@@ -18,7 +18,7 @@ pip install requirements.py
 
 ### Data
 
-We used three public datasets and one in-house data in our experiments. The three public datasets are: [PROSTATEx](https://www.cancerimagingarchive.net/collection/prostatex/), [fastMRI](https://fastmri.med.nyu.edu/) and [MSD](http://medicaldecathlon.com/).
+We used three public datasets and one in-house data in our experiments. The three public datasets are: [PROSTATEx](https://www.cancerimagingarchive.net/collection/prostatex/), [fastMRI](https://fastmri.med.nyu.edu/) and [MSD](http://medicaldecathlon.com/). We organize each dataset into two folders: `train` and `test`, which contain 3D volumes to be processed into 2D images.
 
 
 ### Citation
