@@ -22,21 +22,24 @@ We use three public datasets and one in-house data in our experiments. The three
 
 Please ensure that your dataset is pre-processed in the same manner.
 
-### Train
+### Train and Test
 
-Our code supports multi-GPU training, and the configuration files are provided in this [directory](https://github.com/Calvin-Pang/NExpR/tree/main/configs). **Make sure to update the dataset paths in these configuration files to match your own directories.**
+The configuration files for training and testing are provided in this [directory](https://github.com/Calvin-Pang/NExpR/tree/main/configs). **Make sure to update the dataset paths and checkpoint paths in these configuration files.**
 
-Then, for example, to train NExpR on the PROSTATEx dataset using 4 GPUs, you can run the following command with the specified save directory `SAVE_DIR` and experiment name `SAVE_NAME`:
+Our code supports multi-GPU training. For example, to train NExpR using 4 GPUs, use the following command with the specified training configuration (`TRAIN_CONFIG_PATH`), save directory (`SAVE_DIR`), and experiment name (`SAVE_NAME`):
 
 ```
-torchrun --nproc_per_node=4 train_ddp.py --config configs/train_prostatex_cor_256_lite.yaml --dir SAVE_DIR --name SAVE_NAME
+torchrun --nproc_per_node=4 train_ddp.py --config TRAIN_CONFIG_PATH --dir SAVE_DIR --name SAVE_DIR
+```
+
+To evaluate performance, use the following command. Set `TEST_SCRIPT` to `test-mri.py` for MRI experiments or `test-ct.py` for CT experiments:
+
+```
+python TEST_SCRIPT --config TEST_CONFIG_PATH --gpu GPU_ID --dir SAVE_DIR --name SAVE_DIR
 ```
 
 Feel free to modify the configuration files to adapt them to your own requirements.
 
-
-
-### Test
 
 ### Citation
 
