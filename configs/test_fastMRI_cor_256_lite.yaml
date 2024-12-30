@@ -1,0 +1,61 @@
+model:
+  name: nexpr
+  args:
+    bar_size: 2
+    degree: 8
+    max_basis: 8
+    mode: gray
+    neg_freq: False
+    learnable_basis: True
+    cell_decode: True
+    pos_encode: False
+
+val_dataset_x2:
+  dataset:
+    name: npy-folder-new
+    args:
+      out_size: 256
+      root_path: ../datasets/fastMRI_knee_train_test/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-new
+    args:
+      scale_max: 2
+      scale_min: 2
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+val_dataset_x3:
+  dataset:
+    name: npy-folder-new
+    args:
+      out_size: 256
+      root_path: ../datasets/fastMRI_knee_train_test/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-new
+    args:
+      scale_max: 3
+      scale_min: 3
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+val_dataset_x4:
+  dataset:
+    name: npy-folder-new
+    args:
+      out_size: 256
+      root_path: ../datasets/fastMRI_knee_train_test/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-new
+    args:
+      scale_max: 4
+      scale_min: 4
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+save_test_img: True
+normalization: True
+
+checkpoint_dir: ./save_fastMRI/geif_mlp_bar_2_deg8_0to8_cell_fastMRI_kspaceds_200_CKloss_lite/epoch-best.pt

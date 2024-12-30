@@ -1,0 +1,90 @@
+train_dataset:
+  dataset:
+    name: npy-folder-ct
+    args:
+      out_size: 256
+      # first_k: 1
+      root_path: ../datasets/MSD_Liver_sub/npy/train
+  wrapper:
+    name: sr-explicit-downsampled-ct
+    args:
+      out_size: 256
+      scale_max: 4
+      augment: True
+      # sample_q: 2304
+      repeat: 4
+      mode: train
+  batch_size: 1
+
+val_dataset_x2:
+  dataset:
+    name: npy-folder-ct
+    args:
+      out_size: 256
+      root_path: ../datasets/MSD_Liver_sub/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-ct
+    args:
+      scale_max: 2
+      scale_min: 2
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+# val_dataset_x3:
+#   dataset:
+#     name: npy-folder
+#     args:
+#       root_path: ../datasets/prostatex_cor_train_test/npy/test
+#   wrapper:
+#     name: sr-explicit-downsampled
+#     args:
+#       scale_max: 3
+#       scale_min: 3
+#   batch_size: 1
+
+val_dataset_x4:
+  dataset:
+    name: npy-folder-ct
+    args:
+      out_size: 256
+      root_path: ../datasets/MSD_Liver_sub/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-ct
+    args:
+      scale_max: 4
+      scale_min: 4
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+model:
+  name: nexpr
+  args:
+    bar_size: 2
+    degree: 8
+    max_basis: 8
+    mode: gray
+    neg_freq: False
+    learnable_basis: True
+    cell_decode: True
+    pos_encode: False
+
+optimizer:
+  name: adamw
+  args:
+    lr: 2.5e-5
+    weight_decay: 1.e-5
+
+epoch: 200
+multi_step_lr:
+  milestones: [50, 100]
+  gamma: 0.5
+
+save_checkpoint: True
+epoch_start_save: 10
+epoch_every_save: 10
+
+epoch_start: 100
+
+checkpoint: /home/kaifengpang/MRI-SR-2D/save_CT/geif_mlp_bar_2_deg8_0to8_cell_CT_200_Conloss_lite/checkpoints/checkpoint_100.pt

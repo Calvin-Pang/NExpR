@@ -1,0 +1,76 @@
+train_dataset:
+  dataset:
+    name: npy-folder-new
+    args:
+      out_size: 256
+      root_path: ../datasets/IDX_cor_train_test/npy/train
+  wrapper:
+    name: sr-explicit-downsampled-new
+    args:
+      out_size: 256
+      scale_max: 4
+      augment: True
+      # sample_q: 2304
+      repeat: 4
+      mode: train
+  batch_size: 1
+
+val_dataset_x2:
+  dataset:
+    name: npy-folder-new
+    args:
+      out_size: 256
+      root_path: ../datasets/IDX_cor_train_test/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-new
+    args:
+      scale_max: 2
+      scale_min: 2
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+
+val_dataset_x4:
+  dataset:
+    name: npy-folder-new
+    args:
+      out_size: 256
+      root_path: ../datasets/IDX_cor_train_test/npy/test
+  wrapper:
+    name: sr-explicit-downsampled-new
+    args:
+      scale_max: 4
+      scale_min: 4
+      out_size: 256
+      mode: test
+  batch_size: 1
+
+model:
+  name: nexpr
+  args:
+    bar_size: 2
+    degree: 8
+    max_basis: 8
+    mode: gray
+    neg_freq: False
+    learnable_basis: True
+    cell_decode: True
+    pos_encode: True
+
+optimizer:
+  name: adamw
+  args:
+    lr: 1.0e-4
+    weight_decay: 1.e-5
+
+epoch: 200
+multi_step_lr:
+  milestones: [50, 100, 150]
+  gamma: 0.5
+
+save_checkpoint: True
+epoch_start_save: 10
+epoch_every_save: 10
+
+epoch_start: 1
