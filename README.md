@@ -1,5 +1,7 @@
 # NExpR
 
+![image](https://github.com/user-attachments/assets/90ceed27-f849-40fe-8a86-bd59b82ccbbd)
+
 This repository contains the official implementation for NExpR introduced in the following paper:
 
 [**NExpR: Neural Explicit Representation for Fast Arbitrary-scale Medical Image Super-resolution**](https://www.sciencedirect.com/science/article/pii/S0010482524014392)
