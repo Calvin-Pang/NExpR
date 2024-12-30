@@ -10,13 +10,15 @@ Computers in Biology and Medicine 184 (2025): 109354.
 
 ### Environment
 
-You can install the required packages with this commander:
+You can install the required packages with this command:
 
 ```
 pip install requirements.py
 ```
 
+### Data
 
+We used three public datasets and one in-house data in our experiments. The three public datasets are: [PROSTATEx](https://www.cancerimagingarchive.net/collection/prostatex/), [fastMRI](https://fastmri.med.nyu.edu/) and [MSD](http://medicaldecathlon.com/).
 
 
 ### Citation
