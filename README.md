@@ -22,6 +22,16 @@ We use three public datasets and one in-house data in our experiments. The three
 
 Please ensure that your dataset is pre-processed in the same manner.
 
+### Train
+
+Our code supports training with multiple GPUs, and we provide the configuration files in this [directory](https://github.com/Calvin-Pang/NExpR/tree/main/configs). For example, if you would like to train NExpR for the PROSTATEx dataset with 4 GPUs, you can use the following command with specified save directory `SAVE_DIR` and experiment name `SAVE_NAME`:
+
+```
+torchrun --nproc_per_node=4 train_ddp.py --config configs/train_prostatex_cor_256_lite.yaml --dir SAVE_DIR --name SAVE_NAME
+```
+
+
+### Test
 
 ### Citation
 
