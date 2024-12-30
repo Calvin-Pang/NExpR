@@ -8,8 +8,13 @@ This repository contains the official implementation for NExpR introduced in the
 <br>
 Computers in Biology and Medicine 184 (2025): 109354.
 
+### Environment
 
+You can install the required packages with this commander:
 
+```
+pip install requirements.py
+```
 
 
 
