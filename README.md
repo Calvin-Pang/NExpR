@@ -31,13 +31,13 @@ The configuration files for training and testing are provided in this [directory
 Our code supports multi-GPU training. For example, to train NExpR using 4 GPUs, use the following command with the specified training configuration (`TRAIN_CONFIG_PATH`), save directory (`SAVE_DIR`), and experiment name (`SAVE_NAME`):
 
 ```
-torchrun --nproc_per_node=4 train_ddp.py --config TRAIN_CONFIG_PATH --dir SAVE_DIR --name SAVE_DIR
+torchrun --nproc_per_node=4 train_ddp.py --config TRAIN_CONFIG_PATH --dir SAVE_DIR --name SAVE_NAME
 ```
 
 To evaluate performance, use the following command. Set `TEST_SCRIPT` to `test-mri.py` for MRI experiments or `test-ct.py` for CT experiments:
 
 ```
-python TEST_SCRIPT --config TEST_CONFIG_PATH --gpu GPU_ID --dir SAVE_DIR --name SAVE_DIR
+python TEST_SCRIPT --config TEST_CONFIG_PATH --gpu GPU_ID --dir SAVE_DIR --name SAVE_NAME
 ```
 
 Feel free to modify the configuration files to adapt them to your own requirements.
