@@ -22,7 +22,9 @@ pip install requirements.py
 
 We use three public datasets and one in-house data in our experiments. The three public datasets are: [PROSTATEx](https://www.cancerimagingarchive.net/collection/prostatex/), [fastMRI](https://fastmri.med.nyu.edu/) and [MSD](http://medicaldecathlon.com/). We organize each dataset into two directories: `train` and `test`, containing 3D volumes in the `npy` format that will be processed into 2D images. 
 
-Please ensure that your dataset is pre-processed in the same manner.
+Please ensure that your dataset is pre-processed in the same manner. We saved part of the processed datasets, which can be provided upon request.
+
+
 
 ### Train and Test
 
