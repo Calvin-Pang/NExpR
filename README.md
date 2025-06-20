@@ -1,6 +1,7 @@
 # NExpR
 
-![image](https://github.com/user-attachments/assets/90ceed27-f849-40fe-8a86-bd59b82ccbbd)
+![image](https://github.com/user-attachments/assets/b8462ac3-5736-4be2-8583-d5a0206645c4)
+
 
 This repository contains the official implementation for NExpR introduced in the following paper:
 
