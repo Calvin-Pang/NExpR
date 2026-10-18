@@ -45,6 +45,9 @@ python TEST_SCRIPT --config TEST_CONFIG_PATH --gpu GPU_ID --dir SAVE_DIR --name 
 
 Feel free to modify the configuration files to adapt them to your own requirements.
 
+### Pre-trained models
+
+The pre-trained model files of ProstateX, fastMRI, and MSD (CT) datasets can be found [here](https://drive.google.com/drive/folders/1t7h7gyPXkaW6J1vznFJlVkY1itbBcWMN?usp=sharing). We do not the release pre-trained model for the in-house dataset.
 
 ### Citation
 
