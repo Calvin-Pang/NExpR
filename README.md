@@ -47,7 +47,7 @@ Feel free to modify the configuration files to adapt them to your own requiremen
 
 ### Pre-trained models
 
-The pre-trained model files of ProstateX, fastMRI, and MSD (CT) datasets can be found [here](https://drive.google.com/drive/folders/1t7h7gyPXkaW6J1vznFJlVkY1itbBcWMN?usp=sharing). We do not the release pre-trained model for the in-house dataset.
+The pre-trained model files of ProstateX, fastMRI, and MSD (CT) datasets can be found [here](https://drive.google.com/drive/folders/1t7h7gyPXkaW6J1vznFJlVkY1itbBcWMN?usp=sharing). We do not release the pre-trained model for the in-house dataset.
 
 ### Citation
 
